@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InsertPractice</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I don't want it.</h4>
+    </div>
+</div>
+</body>
+<script>
+    const content = document.querySelector('.content');
+    //replaces content of an HTML tag using innerHTML
+    content.innerHTML = '<h1>I love Selda</h1><h4>blah blah funny joke blah blah</h4>';
+
+//add a new element in addition to existing elements
+    const selda = document.createElement('h1');
+    selda.innerHTML = 'I love sELDA';
+    content.appendChild(selda);
+
+    //put this at the top in addition to existing elements
+    const pizza = document.createElement('h1');
+    pizza.innerHTML = 'I love pizza';
+    content.insertAdjacentText('afterbegin', pizza);
+
+</script>
+</html>
